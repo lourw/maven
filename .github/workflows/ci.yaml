@@ -25,15 +25,15 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Start CI run
+        run: ./nx start-ci-run --distribute-on="5 linux-large" --stop-agents-after="verify-ci"
+
       - name: Print SHA
         run: echo "${{ github.sha }}"
 
       - name: Set up Maven
         shell: bash
         run: ./mvnw --errors --batch-mode --show-version org.apache.maven.plugins:maven-wrapper-plugin:3.3.2:wrapper "-Dmaven=4.0.0-rc-3"
-
-      - name: Start CI run
-        run: ./nx start-ci-run --distribute-on="5 linux-large" --stop-agents-after="verify-ci"
 
       - name: Build Maven distributions
         shell: bash
