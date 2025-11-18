@@ -18,6 +18,10 @@ launch-templates:
       - name: Install zip and unzip
         script: sudo apt-get -yqq install zip unzip
 
+      - name: Setup Maven
+        script: |
+          ./mvnw --errors --batch-mode --show-version org.apache.maven.plugins:maven-wrapper-plugin:3.3.2:wrapper "-Dmaven=4.0.0-rc-3"
+
       - name: Install e2e deps
         script: |
           sudo apt-get update
