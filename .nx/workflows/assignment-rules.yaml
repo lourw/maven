@@ -1,0 +1,6 @@
+assignment-rules:
+  - projects:
+      - "*"
+    run-on:
+      - agent: linux-large
+        parallelism: 4

@@ -26,7 +26,7 @@ jobs:
           persist-credentials: false
 
       - name: Start CI run
-        run: ./nx start-ci-run --distribute-on="5 linux-large" --stop-agents-after="verify-ci"
+        run: npx nx-cloud start-ci-run --distribute-on="5 linux-large" --stop-agents-after="verify-ci" --assignment-rules=".nx/workflows/assignment-rules.yaml"
 
       - name: Print SHA
         run: echo "${{ github.sha }}"
