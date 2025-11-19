@@ -1,5 +1,8 @@
+distribute-on:
+  default: 5 linux-large
+
 assignment-rules:
-  - things:
+  - targets:
       - "*"
     run-on:
       - agent: linux-large
