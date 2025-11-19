@@ -10,6 +10,7 @@
   "plugins": [
     "@nx/maven"
   ],
+  "bust": 1,
   "nxCloudUrl": "https://snapshot.nx.app",
   "nxCloudId": "691cc324f38e74203c2ea4b9"
 }
